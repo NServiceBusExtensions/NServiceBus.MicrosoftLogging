@@ -2,12 +2,11 @@
 using NServiceBus;
 using NServiceBus.Logging;
 using Microsoft.Extensions.Logging;
-using NUnit.Framework;
+using Xunit;
 
-[TestFixture]
 public class IntegrationTests
 {
-    [Test]
+    [Fact]
     public async Task Ensure_log_messages_are_redirected()
     {
         using (var msLoggerFactory = new LoggerFactory())
@@ -17,14 +16,11 @@ public class IntegrationTests
             var logFactory = LogManager.Use<MicrosoftLogFactory>();
             logFactory.UseMsFactory(msLoggerFactory);
 
-            var endpointConfiguration = new EndpointConfiguration("Tests");
-            endpointConfiguration.EnableInstallers();
-            endpointConfiguration.UseTransport<LearningTransport>();
-            endpointConfiguration.SendFailedMessagesTo("error");
-            endpointConfiguration.UsePersistence<InMemoryPersistence>();
+            var configuration = new EndpointConfiguration("Tests");
+            configuration.UseTransport<LearningTransport>();
 
-            var endpoint = await Endpoint.Start(endpointConfiguration);
-            Assert.IsNotEmpty(logMessageCapture.LoggingEvents);
+            var endpoint = await Endpoint.Start(configuration);
+            Assert.NotEmpty(logMessageCapture.LoggingEvents);
             await endpoint.Stop();
         }
     }

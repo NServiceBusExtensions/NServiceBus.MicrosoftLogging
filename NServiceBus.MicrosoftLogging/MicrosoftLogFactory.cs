@@ -1,9 +1,9 @@
 ﻿using System;
+using NServiceBus.Logging;
+using MsLoggerFactory = Microsoft.Extensions.Logging.ILoggerFactory;
 
 namespace NServiceBus
 {
-    using Logging;
-    using MsLoggerFactory = Microsoft.Extensions.Logging.ILoggerFactory;
 
     /// <summary>
     /// Configure NServiceBus logging messages to use Microsoft.Extensions.Logging.
