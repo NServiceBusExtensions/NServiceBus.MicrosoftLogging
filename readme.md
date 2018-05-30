@@ -1,9 +1,9 @@
-![Icon](https://raw.githubusercontent.com/SimonCropp/NServiceBus.MicrosoftLogging/master/Icon/package_icon.png)
+![Icon](https://raw.githubusercontent.com/NServiceBusExtensions/NServiceBus.MicrosoftLogging/master/icon.png)
 
 NServiceBus.MicrosoftLogging
 ============================
 
-Add support for [NServiceBus](http://particular.net/NServiceBus) to log to [Microsoft.Extensions.Logging](https://github.com/aspnet/Logging)
+Add support for [NServiceBus](https://particular.net/nservicebus) to log to [Microsoft.Extensions.Logging](https://github.com/aspnet/Logging)
 
 
 ## The nuget package  [![NuGet Status](http://img.shields.io/nuget/v/NServiceBus.MicrosoftLogging.svg?style=flat)](https://www.nuget.org/packages/NServiceBus.MicrosoftLogging/)
@@ -15,7 +15,7 @@ https://nuget.org/packages/NServiceBus.MicrosoftLogging/
 
 ## Documentation
 
-https://docs.particular.net/nservicebus/logging/microsoft
+https://docs.particular.net/nuget/NServiceBus.MicrosoftLogging
 
 
 ## Icon
