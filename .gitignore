@@ -10,11 +10,10 @@
 *.user
 *.sln.docstates
 *.pidb
-*.ncrunchsolution
-*.ncrunchproject
-*.DotSettings
-
 .learningtransport
+
+.vs
+*.received.txt
 
 # Build results
 [Dd]ebug/
@@ -39,7 +38,7 @@
 *test-results*
 
 .vs/
-
+.learningtransport/
 nugets/
 
 # Visual Studio profiler
@@ -84,3 +83,5 @@ Fody/.DS_Store
 .DS_Store
 
 *.userprefs
+*.jtconfig
+*.bak
