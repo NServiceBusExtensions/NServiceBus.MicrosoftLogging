@@ -11,6 +11,7 @@
     <PackageTags>NServiceBus, MicrosoftLogging</PackageTags>
     <PackageIconUrl>https://raw.githubusercontent.com/NServiceBusExtensions/NServiceBus.MicrosoftLogging/master/icon.png</PackageIconUrl>
     <PackageProjectUrl>https://docs.particular.net/nuget/NServiceBus.MicrosoftLogging</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/NServiceBusExtensions/NServiceBus.MicrosoftLogging</RepositoryUrl>
     <PackageOutputPath>..\nugets</PackageOutputPath>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>../key.snk</AssemblyOriginatorKeyFile>
