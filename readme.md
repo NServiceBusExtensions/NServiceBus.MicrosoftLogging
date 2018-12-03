@@ -1,9 +1,4 @@
-![Icon](https://raw.githubusercontent.com/NServiceBusExtensions/NServiceBus.MicrosoftLogging/master/icon.png)
-
-NServiceBus.MicrosoftLogging
-============================
-
-Add support for [NServiceBus](https://particular.net/nservicebus) to log to [Microsoft.Extensions.Logging](https://github.com/aspnet/Logging)
+<img src="https://raw.github.com/NServiceBusExtensions/NServiceBus.MicrosoftLogging/master/src/icon.png" height="25px"> Add support for [NServiceBus](https://particular.net/nservicebus) to log to [Microsoft.Extensions.Logging](https://github.com/aspnet/Logging)
 
 
 <!--- StartOpenCollectiveBackers -->
