@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using NServiceBus;
 using NServiceBus.Logging;
@@ -8,9 +9,12 @@ public static class Program
 {
     public static async Task Main()
     {
-        using (var loggerFactory = new LoggerFactory())
+        var serviceCollection = new ServiceCollection();
+
+        serviceCollection.AddLogging(loggingBuilder => { loggingBuilder.AddConsole(); });
+        using (var serviceProvider = serviceCollection.BuildServiceProvider())
+        using (var loggerFactory = serviceProvider.GetService<Microsoft.Extensions.Logging.ILoggerFactory>())
         {
-            loggerFactory.AddConsole();
             var logFactory = LogManager.Use<MicrosoftLogFactory>();
             logFactory.UseMsFactory(loggerFactory);
 
