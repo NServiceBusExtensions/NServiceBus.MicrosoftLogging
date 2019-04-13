@@ -3,8 +3,10 @@ using NServiceBus;
 using NServiceBus.Logging;
 using Microsoft.Extensions.Logging;
 using Xunit;
+using Xunit.Abstractions;
 
-public class IntegrationTests
+public class IntegrationTests :
+    XunitLoggingBase
 {
     [Fact]
     public async Task Ensure_log_messages_are_redirected()
@@ -23,5 +25,10 @@ public class IntegrationTests
             Assert.NotEmpty(logMessageCapture.LoggingEvents);
             await endpoint.Stop();
         }
+    }
+
+    public IntegrationTests(ITestOutputHelper output) :
+        base(output)
+    {
     }
 }
