@@ -24,7 +24,7 @@ Thanks to all the backing developers! Support this project by [becoming a patron
 <!--- EndOpenCollectiveBackers -->
 <a href="#" id="endofbacking"></a>
 
-## The NuGet package [![NuGet Status](http://img.shields.io/nuget/v/NServiceBus.MicrosoftLogging.svg?style=flat)](https://www.nuget.org/packages/NServiceBus.MicrosoftLogging/)
+## The NuGet package [![NuGet Status](http://img.shields.io/nuget/v/NServiceBus.MicrosoftLogging.svg)](https://www.nuget.org/packages/NServiceBus.MicrosoftLogging/)
 
 https://nuget.org/packages/NServiceBus.MicrosoftLogging/
 
