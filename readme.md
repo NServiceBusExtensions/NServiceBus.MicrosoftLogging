@@ -28,8 +28,6 @@ Thanks to all the backing developers! Support this project by [becoming a patron
 
 https://nuget.org/packages/NServiceBus.MicrosoftLogging/
 
-    PM> Install-Package NServiceBus.MicrosoftLogging
-
 
 ## Documentation
 
