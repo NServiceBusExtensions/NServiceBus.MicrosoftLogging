@@ -1,4 +1,4 @@
-<img src="https://raw.github.com/NServiceBusExtensions/NServiceBus.MicrosoftLogging/master/src/icon.png" height="25px"> Add support for [NServiceBus](https://particular.net/nservicebus) to log to [Microsoft.Extensions.Logging](https://github.com/aspnet/Logging)
+<img src="/src/icon.png" height="25px"> Add support for [NServiceBus](https://particular.net/nservicebus) to log to [Microsoft.Extensions.Logging](https://github.com/aspnet/Logging)
 
 <!--- StartOpenCollectiveBackers -->
 
@@ -24,9 +24,9 @@ Thanks to all the backing developers! Support this project by [becoming a patron
 <!--- EndOpenCollectiveBackers -->
 <a href="#" id="endofbacking"></a>
 
-## The NuGet package [![NuGet Status](http://img.shields.io/nuget/v/NServiceBus.MicrosoftLogging.svg)](https://www.nuget.org/packages/NServiceBus.MicrosoftLogging/)
+## NuGet package
 
-https://nuget.org/packages/NServiceBus.MicrosoftLogging/
+https://nuget.org/packages/NServiceBus.MicrosoftLogging/ [![NuGet Status](http://img.shields.io/nuget/v/NServiceBus.MicrosoftLogging.svg)](https://www.nuget.org/packages/NServiceBus.MicrosoftLogging/)
 
 
 ## Documentation
@@ -36,4 +36,4 @@ https://docs.particular.net/nuget/NServiceBus.MicrosoftLogging
 
 ## Icon
 
-<a href="http://thenounproject.com/term/abstract/847344/" target="_blank">Abstract</a> designed by <a href="https://thenounproject.com/neha.shinde/" target="_blank">Neha Shinde</a> from The Noun Project
+[Abstract](https://thenounproject.com/term/abstract/847344/) designed by [Neha Shinde](https://thenounproject.com/neha.shinde) from [The Noun Project](https://thenounproject.com).
