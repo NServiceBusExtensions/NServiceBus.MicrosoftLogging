@@ -6,7 +6,7 @@ using Xunit;
 using Xunit.Abstractions;
 
 public class IntegrationTests :
-    XunitLoggingBase
+    XunitApprovalBase
 {
     [Fact]
     public async Task Ensure_log_messages_are_redirected()
