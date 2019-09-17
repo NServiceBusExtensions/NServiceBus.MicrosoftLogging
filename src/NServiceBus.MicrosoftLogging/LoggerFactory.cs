@@ -1,9 +1,11 @@
 ﻿using System;
-using Microsoft.Extensions.Logging.Abstractions.Internal;
+using Microsoft.Extensions.Logging;
 using NServiceBus.Logging;
+using ILoggerFactory = NServiceBus.Logging.ILoggerFactory;
 using MsLoggerFactory = Microsoft.Extensions.Logging.ILoggerFactory;
 
-class LoggerFactory : ILoggerFactory
+class LoggerFactory : 
+    ILoggerFactory
 {
     MsLoggerFactory msFactory;
 
@@ -14,7 +16,8 @@ class LoggerFactory : ILoggerFactory
 
     public ILog GetLogger(Type type)
     {
-        return GetLogger(TypeNameHelper.GetTypeDisplayName(type));
+        var logger = msFactory.CreateLogger(type);
+        return new Logger(logger);
     }
 
     public ILog GetLogger(string name)

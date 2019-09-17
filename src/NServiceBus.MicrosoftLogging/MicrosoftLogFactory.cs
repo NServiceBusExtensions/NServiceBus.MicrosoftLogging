@@ -4,14 +4,14 @@ using MsLoggerFactory = Microsoft.Extensions.Logging.ILoggerFactory;
 
 namespace NServiceBus
 {
-
     /// <summary>
     /// Configure NServiceBus logging messages to use Microsoft.Extensions.Logging.
     /// Use by calling <see cref="LogManager.Use{T}"/> where the T is <see cref="MicrosoftLogFactory"/>.
     /// </summary>
-    public class MicrosoftLogFactory : LoggingFactoryDefinition
+    public class MicrosoftLogFactory :
+        LoggingFactoryDefinition
     {
-        MsLoggerFactory msLoggerFactory;
+        MsLoggerFactory? msLoggerFactory;
 
         /// <summary>
         /// <see cref="LoggingFactoryDefinition.GetLoggingFactory"/>.
