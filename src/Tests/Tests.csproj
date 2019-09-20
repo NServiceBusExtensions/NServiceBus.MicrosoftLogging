@@ -8,7 +8,7 @@
     <PackageReference Include="XunitLogger" Version="3.0.6" />
     <PackageReference Include="Xunit.ApprovalTests" Version="3.0.6" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.3.0" />
     <ProjectReference Include="..\NServiceBus.MicrosoftLogging\NServiceBus.MicrosoftLogging.csproj" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="3.0.0-rc1.19456.10" />
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="3.0.0-rc1.19456.10" />
