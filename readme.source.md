@@ -42,7 +42,7 @@ As `LoggerFactory` implements [IDisposable](https://msdn.microsoft.com/en-us/lib
 
 ### In a windows service
 
-When [hosting in a windows service](/nservicebus/hosting/windows-service.md) `LoggerFactory` should be disposed of as part of the [ServiceBase.OnStop](https://msdn.microsoft.com/en-us/library/system.serviceprocess.servicebase.onstop.aspx) execution.
+When [hosting in a windows service](https://docs.particular.net/nservicebus/hosting/windows-service) `LoggerFactory` should be disposed of as part of the [ServiceBase.OnStop](https://msdn.microsoft.com/en-us/library/system.serviceprocess.servicebase.onstop.aspx) execution.
 
 snippet: MsLoggingInService
 
