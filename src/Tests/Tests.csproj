@@ -16,7 +16,7 @@
     <PackageReference Include="Microsoft.Extensions.Logging" Version="3.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="3.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.0.0" />
-    <PackageReference Include="ProjectDefaults" Version="1.0.29" PrivateAssets="All" />
+    <PackageReference Include="ProjectDefaults" Version="1.0.30" PrivateAssets="All" />
     <PackageReference Include="System.ServiceProcess.ServiceController" Version="4.*" />
   </ItemGroup>
 </Project>
