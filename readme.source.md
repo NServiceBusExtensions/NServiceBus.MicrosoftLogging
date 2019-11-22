@@ -39,6 +39,11 @@ snippet: MsLoggingInCode
 
 As `LoggerFactory` implements [IDisposable](https://msdn.microsoft.com/en-us/library/system.idisposable.aspx) it must be disposed of after stopping the NServiceBus endpoint. The process for doing this will depend on how the endpoint is being hosted.
 
+### In a generic host
+
+Disposing the `LoggerFactory` is done by the underlying infrastructure.
+
+snippet: MsLoggingInGenericHost
 
 ### In a windows service
 
