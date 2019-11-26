@@ -32,7 +32,7 @@ public static class Program
                 loggingBuilder.ClearProviders();
                 loggingBuilder.AddConsole();
             })
-            .UseNServiceBusLogging() // should go first
+            .UseMicrosoftLogFactoryLogging() // should go first
             .UseNServiceBus(ctx =>
             {
                 var configuration = new EndpointConfiguration("MicrosoftLoggingSample");
