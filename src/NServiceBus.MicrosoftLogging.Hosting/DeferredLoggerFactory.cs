@@ -2,7 +2,8 @@ using System;
 using System.Collections.Concurrent;
 using NServiceBus.Logging;
 
-class DeferredLoggerFactory : ILoggerFactory
+class DeferredLoggerFactory :
+    ILoggerFactory
 {
     public ConcurrentDictionary<string, ConcurrentQueue<(LogLevel level, string message)>> deferredLogs = new ConcurrentDictionary<string, ConcurrentQueue<(LogLevel level, string message)>>();
 
@@ -23,8 +24,6 @@ class DeferredLoggerFactory : ILoggerFactory
 
     public ILog GetLogger(string name)
     {
-        
-
         return new NamedLogger(name, this)
         {
             IsDebugEnabled = isDebugEnabled,

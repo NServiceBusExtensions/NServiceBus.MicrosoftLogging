@@ -2,7 +2,8 @@
 using System;
 using NServiceBus.Logging;
 
-class Logger : ILog
+class Logger :
+    ILog
 {
     ILogger logger;
 

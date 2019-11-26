@@ -4,7 +4,7 @@ using NServiceBus.Logging;
 using ILoggerFactory = NServiceBus.Logging.ILoggerFactory;
 using MsLoggerFactory = Microsoft.Extensions.Logging.ILoggerFactory;
 
-class LoggerFactory : 
+class LoggerFactory :
     ILoggerFactory
 {
     MsLoggerFactory msFactory;

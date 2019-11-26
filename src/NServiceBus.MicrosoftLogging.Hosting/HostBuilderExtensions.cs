@@ -16,6 +16,7 @@ public static class HostBuilderExtensions
     /// <remarks>If <paramref name="deferLogging"/> is used this extension method needs to be called before any usage of NServiceBus such as <code>UseNServiceBus</code>.</remarks>
     public static IHostBuilder UseMicrosoftLogFactoryLogging(this IHostBuilder hostBuilder, bool deferLogging = true)
     {
+        Guard.AgainstNull(hostBuilder, nameof(hostBuilder));
         if (deferLogging)
         {
             LogManager.Use<DeferredLoggerFactoryDefinition>();

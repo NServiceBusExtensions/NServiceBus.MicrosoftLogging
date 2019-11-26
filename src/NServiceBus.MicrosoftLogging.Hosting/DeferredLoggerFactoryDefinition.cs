@@ -1,7 +1,8 @@
 using System;
 using NServiceBus.Logging;
 
-class DeferredLoggerFactoryDefinition : LoggingFactoryDefinition
+class DeferredLoggerFactoryDefinition :
+    LoggingFactoryDefinition
 {
     public DeferredLoggerFactoryDefinition()
     {

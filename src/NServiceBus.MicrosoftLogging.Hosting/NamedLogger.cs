@@ -1,7 +1,8 @@
 using System;
 using NServiceBus.Logging;
 
-class NamedLogger : ILog
+class NamedLogger :
+    ILog
 {
     public NamedLogger(string name, DeferredLoggerFactory defaultLoggerFactory)
     {

@@ -7,7 +7,8 @@ using MsLoggerFactory = Microsoft.Extensions.Logging.ILoggerFactory;
 using NServiceBus;
 using NServiceBus.Logging;
 
-class NServiceBusLoggingHostedService : IHostedService
+class NServiceBusLoggingHostedService :
+    IHostedService
 {
     public NServiceBusLoggingHostedService(MsLoggerFactory loggerFactory)
     {
@@ -19,7 +20,7 @@ class NServiceBusLoggingHostedService : IHostedService
         var logFactory = LogManager.Use<MicrosoftLogFactory>();
         logFactory.UseMsFactory(loggerFactory);
 
-        foreach (var deferredLog in DeferredLoggerFactoryDefinition.Factory?.deferredLogs ?? 
+        foreach (var deferredLog in DeferredLoggerFactoryDefinition.Factory?.deferredLogs ??
             new ConcurrentDictionary<string, ConcurrentQueue<(LogLevel level, string message)>>())
         {
             var logger = LogManager.GetLogger(deferredLog.Key);
