@@ -2,6 +2,7 @@
 using NServiceBus;
 using NServiceBus.Logging;
 using Microsoft.Extensions.Logging;
+using VerifyXunit;
 using Xunit;
 using Xunit.Abstractions;
 
