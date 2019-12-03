@@ -19,7 +19,7 @@ public static class Program
             DateSend = DateTime.Now,
         };
         await messageSession.SendLocal(message);
-        Console.WriteLine("\r\nPress any key to stop program\r\n");
+        Console.WriteLine("Press any key to stop program");
 
         Console.Read();
         await host.StopAsync();
@@ -38,10 +38,7 @@ public static class Program
         builder.UseNServiceBus(ctx =>
         {
             var configuration = new EndpointConfiguration("MicrosoftLoggingSample");
-            configuration.EnableInstallers();
-            configuration.UsePersistence<InMemoryPersistence>();
             configuration.UseTransport<LearningTransport>();
-            configuration.SendFailedMessagesTo("error");
             return configuration;
         });
         return builder;
