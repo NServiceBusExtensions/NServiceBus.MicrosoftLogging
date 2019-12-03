@@ -25,21 +25,25 @@ public static class Program
         await host.StopAsync();
     }
 
-    public static IHostBuilder CreateHostBuilder() =>
-        Host.CreateDefaultBuilder()
-            .ConfigureLogging(loggingBuilder =>
-            {
-                loggingBuilder.ClearProviders();
-                loggingBuilder.AddConsole();
-            })
-            .UseMicrosoftLogFactoryLogging() // should go first
-            .UseNServiceBus(ctx =>
-            {
-                var configuration = new EndpointConfiguration("MicrosoftLoggingSample");
-                configuration.EnableInstallers();
-                configuration.UsePersistence<InMemoryPersistence>();
-                configuration.UseTransport<LearningTransport>();
-                configuration.SendFailedMessagesTo("error");
-                return configuration;
-            });
+    static IHostBuilder CreateHostBuilder()
+    {
+        var builder = Host.CreateDefaultBuilder();
+        builder.ConfigureLogging(logging =>
+        {
+            logging.ClearProviders();
+            logging.AddConsole();
+        });
+        // should go before UseNServiceBus
+        builder.UseMicrosoftLogFactoryLogging();
+        builder.UseNServiceBus(ctx =>
+        {
+            var configuration = new EndpointConfiguration("MicrosoftLoggingSample");
+            configuration.EnableInstallers();
+            configuration.UsePersistence<InMemoryPersistence>();
+            configuration.UseTransport<LearningTransport>();
+            configuration.SendFailedMessagesTo("error");
+            return configuration;
+        });
+        return builder;
+    }
 }

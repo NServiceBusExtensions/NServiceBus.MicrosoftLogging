@@ -8,16 +8,16 @@
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.0.1" />
     <PackageReference Include="Xunit" Version="2.4.1" />
     <PackageReference Include="XunitContext" Version="1.5.1" />
-    <PackageReference Include="Verify.Xunit" Version="1.0.0-beta.28" />
+    <PackageReference Include="Verify.Xunit" Version="1.0.0-beta.29" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.4.0" />
-    <PackageReference Include="MarkdownSnippets.MsBuild" Version="17.0.0" PrivateAssets="All" />
+    <PackageReference Include="MarkdownSnippets.MsBuild" Version="17.0.1" PrivateAssets="all" />
     <ProjectReference Include="..\NServiceBus.MicrosoftLogging.Hosting\NServiceBus.MicrosoftLogging.Hosting.csproj" />
     <ProjectReference Include="..\NServiceBus.MicrosoftLogging\NServiceBus.MicrosoftLogging.csproj" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="3.0.1" />
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="3.0.1" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.0.1" />
     <PackageReference Include="ProjectDefaults" Version="1.0.33" PrivateAssets="All" />
-    <PackageReference Include="System.ServiceProcess.ServiceController" Version="4.*" />
+    <PackageReference Include="System.ServiceProcess.ServiceController" Version="4.6.0" />
   </ItemGroup>
 </Project>

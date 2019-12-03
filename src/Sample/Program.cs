@@ -11,7 +11,7 @@ public static class Program
     {
         var serviceCollection = new ServiceCollection();
 
-        serviceCollection.AddLogging(loggingBuilder => { loggingBuilder.AddConsole(); });
+        serviceCollection.AddLogging(logging => { logging.AddConsole(); });
         await using var serviceProvider = serviceCollection.BuildServiceProvider();
         using var loggerFactory = serviceProvider.GetService<Microsoft.Extensions.Logging.ILoggerFactory>();
         var logFactory = LogManager.Use<MicrosoftLogFactory>();

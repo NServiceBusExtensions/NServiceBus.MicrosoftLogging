@@ -7,13 +7,11 @@ class GenericHostUsage
     {
         #region MsLoggingInGenericHost
 
-        Host.CreateDefaultBuilder()
-            .ConfigureLogging(loggingBuilder =>
-            {
-                loggingBuilder.AddConsole();
-            })
-            // should go before any other Use or Configure method that uses NServiceBus
-            .UseMicrosoftLogFactoryLogging();
+        var builder = Host.CreateDefaultBuilder();
+        builder.ConfigureLogging(logging => { logging.AddConsole(); });
+        // should go before any other Use or Configure method that uses NServiceBus
+        builder.UseMicrosoftLogFactoryLogging();
+
         #endregion
     }
 }

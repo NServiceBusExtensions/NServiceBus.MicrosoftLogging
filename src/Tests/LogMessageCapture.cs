@@ -1,10 +1,12 @@
 using System;
-using System.Collections.Generic;
+using System.Collections.Concurrent;
 using Microsoft.Extensions.Logging;
 
-class LogMessageCapture : ILoggerProvider, ILogger
+class LogMessageCapture :
+    ILoggerProvider,
+    ILogger
 {
-    public List<string> LoggingEvents = new List<string>();
+    public ConcurrentBag<string> LoggingEvents = new ConcurrentBag<string>();
 
     public void Dispose()
     {
