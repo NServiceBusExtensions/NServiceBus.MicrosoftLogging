@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
     <GenerateProgramFile>false</GenerateProgramFile>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.1.0" />
     <PackageReference Include="Xunit" Version="2.4.1" />
     <PackageReference Include="XunitContext" Version="1.5.1" />
     <PackageReference Include="Verify.Xunit" Version="1.0.0-beta.31" />
@@ -14,11 +14,11 @@
     <PackageReference Include="MarkdownSnippets.MsBuild" Version="17.0.1" PrivateAssets="all" />
     <ProjectReference Include="..\NServiceBus.MicrosoftLogging.Hosting\NServiceBus.MicrosoftLogging.Hosting.csproj" />
     <ProjectReference Include="..\NServiceBus.MicrosoftLogging\NServiceBus.MicrosoftLogging.csproj" />
-    <PackageReference Include="Microsoft.Extensions.Logging" Version="3.0.1" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="3.0.1" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="3.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.1.0" />
     <PackageReference Include="ProjectDefaults" Version="1.0.33" PrivateAssets="All" />
     <PackageReference Include="NServiceBus.Extensions.Hosting" Version="1.0.0" />
-    <PackageReference Include="System.ServiceProcess.ServiceController" Version="4.6.0" />
+    <PackageReference Include="System.ServiceProcess.ServiceController" Version="4.7.0" />
   </ItemGroup>
 </Project>
