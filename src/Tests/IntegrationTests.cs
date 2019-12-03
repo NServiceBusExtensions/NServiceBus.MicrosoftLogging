@@ -37,15 +37,15 @@ public class IntegrationTests :
     }
 
     [Fact]
-    public async Task Ensure_log_messages_are_redirected_in_Hosting_deferred()
+    public Task Ensure_log_messages_are_redirected_in_Hosting_deferred()
     {
-        await RunWithHost(true);
+        return RunWithHost(true);
     }
 
     [Fact]
-    public async Task Ensure_log_messages_are_redirected_in_Hosting_not_deferred()
+    public Task Ensure_log_messages_are_redirected_in_Hosting_not_deferred()
     {
-        await RunWithHost(false);
+        return RunWithHost(false);
     }
 
     static async Task RunWithHost(bool deferLogging)
