@@ -31,6 +31,7 @@ public class IntegrationTests :
             DateSend = DateTime.Now,
         };
         await endpoint.SendLocal(message);
+        await Task.Delay(500);
         Assert.NotEmpty(LogMessageCapture.LoggingEvents);
         await endpoint.Stop();
     }
@@ -69,6 +70,7 @@ public class IntegrationTests :
             DateSend = DateTime.Now,
         };
         await messageSession.SendLocal(message);
+        await Task.Delay(500);
 
         Assert.NotEmpty(LogMessageCapture.LoggingEvents);
         await host.StopAsync();
