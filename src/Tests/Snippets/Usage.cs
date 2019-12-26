@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Logging;
 using NServiceBus.Logging;
 using Microsoft.Extensions.DependencyInjection;
+using MsLogLevel = Microsoft.Extensions.Logging.LogLevel;
 
 class Usage
 {
@@ -12,7 +13,7 @@ class Usage
         var serviceCollection = new ServiceCollection();
         serviceCollection.AddLogging(loggingBuilder =>
         {
-            loggingBuilder.AddFilter(level => level >= Microsoft.Extensions.Logging.LogLevel.Information);
+            loggingBuilder.AddFilter(level => level >= MsLogLevel.Information);
             loggingBuilder.AddConsole();
         });
 

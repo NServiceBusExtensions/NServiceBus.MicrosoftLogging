@@ -45,7 +45,7 @@ Thanks to all the backing developers! Support this project by [becoming a patron
 var serviceCollection = new ServiceCollection();
 serviceCollection.AddLogging(loggingBuilder =>
 {
-    loggingBuilder.AddFilter(level => level >= Microsoft.Extensions.Logging.LogLevel.Information);
+    loggingBuilder.AddFilter(level => level >= MsLogLevel.Information);
     loggingBuilder.AddConsole();
 });
 
@@ -54,7 +54,7 @@ var logFactory = LogManager.Use<MicrosoftLogFactory>();
 logFactory.UseMsFactory(loggerFactory);
 // endpoint startup and shutdown
 ```
-<sup>[snippet source](/src/Tests/Snippets/Usage.cs#L10-L23) / [anchor](#snippet-msloggingincode)</sup>
+<sup><a href='/src/Tests/Snippets/Usage.cs#L11-L24' title='File snippet `msloggingincode` was extracted from'>snippet source</a> | <a href='#snippet-msloggingincode' title='Navigate to start of snippet `msloggingincode`'>anchor</a></sup>
 <!-- endsnippet -->
 
 
@@ -75,7 +75,7 @@ builder.ConfigureLogging(logging => { logging.AddConsole(); });
 // should go before any other Use or Configure method that uses NServiceBus
 builder.UseMicrosoftLogFactoryLogging();
 ```
-<sup>[snippet source](/src/Tests/Snippets/GenericHostUsage.cs#L8-L15) / [anchor](#snippet-msloggingingenerichost)</sup>
+<sup><a href='/src/Tests/Snippets/GenericHostUsage.cs#L8-L15' title='File snippet `msloggingingenerichost` was extracted from'>snippet source</a> | <a href='#snippet-msloggingingenerichost' title='Navigate to start of snippet `msloggingingenerichost`'>anchor</a></sup>
 <!-- endsnippet -->
 
 
@@ -86,6 +86,9 @@ When [hosting in a windows service](https://docs.particular.net/nservicebus/host
 <!-- snippet: MsLoggingInService -->
 <a id='snippet-mslogginginservice'/></a>
 ```cs
+using MsLogLevel = Microsoft.Extensions.Logging.LogLevel;
+using MsLoggerFactory = Microsoft.Extensions.Logging.ILoggerFactory;
+
 [DesignerCategory("Code")]
 class ProgramService :
     ServiceBase
@@ -117,13 +120,13 @@ class ProgramService :
         var services = new ServiceCollection();
         services.AddLogging(builder =>
         {
-            builder.AddFilter(level => level >= Microsoft.Extensions.Logging.LogLevel.Information);
+            builder.AddFilter(level => level >= MsLogLevel.Information);
             builder.AddConsole();
         });
 
         var serviceProvider = services.BuildServiceProvider();
 
-        loggerFactory = serviceProvider.GetService<Microsoft.Extensions.Logging.ILoggerFactory>();
+        loggerFactory = serviceProvider.GetService<MsLoggerFactory>();
         var logFactory = LogManager.Use<MicrosoftLogFactory>();
         logFactory.UseMsFactory(loggerFactory);
         var endpointConfiguration = new EndpointConfiguration("EndpointName");
@@ -146,7 +149,7 @@ class ProgramService :
     }
 }
 ```
-<sup>[snippet source](/src/Tests/Snippets/ProgramService.cs#L10-L70) / [anchor](#snippet-mslogginginservice)</sup>
+<sup><a href='/src/Tests/Snippets/ProgramService.cs#L10-L74' title='File snippet `mslogginginservice` was extracted from'>snippet source</a> | <a href='#snippet-mslogginginservice' title='Navigate to start of snippet `mslogginginservice`'>anchor</a></sup>
 <!-- endsnippet -->
 
 

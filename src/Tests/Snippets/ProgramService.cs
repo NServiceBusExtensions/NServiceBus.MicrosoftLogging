@@ -8,6 +8,10 @@ using NServiceBus;
 using NServiceBus.Logging;
 
 #region MsLoggingInService
+
+using MsLogLevel = Microsoft.Extensions.Logging.LogLevel;
+using MsLoggerFactory = Microsoft.Extensions.Logging.ILoggerFactory;
+
 [DesignerCategory("Code")]
 class ProgramService :
     ServiceBase
@@ -39,13 +43,13 @@ class ProgramService :
         var services = new ServiceCollection();
         services.AddLogging(builder =>
         {
-            builder.AddFilter(level => level >= Microsoft.Extensions.Logging.LogLevel.Information);
+            builder.AddFilter(level => level >= MsLogLevel.Information);
             builder.AddConsole();
         });
 
         var serviceProvider = services.BuildServiceProvider();
 
-        loggerFactory = serviceProvider.GetService<Microsoft.Extensions.Logging.ILoggerFactory>();
+        loggerFactory = serviceProvider.GetService<MsLoggerFactory>();
         var logFactory = LogManager.Use<MicrosoftLogFactory>();
         logFactory.UseMsFactory(loggerFactory);
         var endpointConfiguration = new EndpointConfiguration("EndpointName");
