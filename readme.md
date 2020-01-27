@@ -35,7 +35,8 @@ Thanks to the current backers.
   * [Usage](#usage)
   * [Usage when hosting](#usage-when-hosting)
     * [In a generic host](#in-a-generic-host)
-    * [In a windows service](#in-a-windows-service)<!-- endtoc -->
+    * [In a windows service](#in-a-windows-service)
+  * [Security contact information](#security-contact-information)<!-- endtoc -->
 
 
 ## NuGet package
@@ -159,9 +160,9 @@ class ProgramService :
 <!-- endsnippet -->
 
 
-## Release Notes
+## Security contact information
 
-See [closed milestones](../../milestones?state=closed).
+To report a security vulnerability, use the [Tidelift security contact](https://tidelift.com/security). Tidelift will coordinate the fix and disclosure.
 
 
 ## Icon
