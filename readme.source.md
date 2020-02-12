@@ -28,6 +28,7 @@ toc
 ## NuGet package
 
 https://nuget.org/packages/NServiceBus.MicrosoftLogging/
+https://nuget.org/packages/NServiceBus.MicrosoftLogging.Hosting
 
 
 ## Usage
@@ -46,6 +47,7 @@ Disposing the `LoggerFactory` is done by the underlying infrastructure.
 
 snippet: MsLoggingInGenericHost
 
+Note: `UseMicrosoftLogFactoryLogger` requires adding `NServiceBus.MicrosoftLogging.Hosting` as a package dependency.
 
 ### In a windows service
 
