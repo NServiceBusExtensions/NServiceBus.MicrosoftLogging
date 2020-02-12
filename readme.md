@@ -42,6 +42,7 @@ Thanks to the current backers.
 ## NuGet package
 
 https://nuget.org/packages/NServiceBus.MicrosoftLogging/
+https://nuget.org/packages/NServiceBus.MicrosoftLogging.Hosting
 
 
 ## Usage
@@ -85,6 +86,7 @@ builder.UseMicrosoftLogFactoryLogging();
 <sup><a href='/src/Tests/Snippets/GenericHostUsage.cs#L8-L15' title='File snippet `msloggingingenerichost` was extracted from'>snippet source</a> | <a href='#snippet-msloggingingenerichost' title='Navigate to start of snippet `msloggingingenerichost`'>anchor</a></sup>
 <!-- endsnippet -->
 
+Note: `UseMicrosoftLogFactoryLogger` requires adding `NServiceBus.MicrosoftLogging.Hosting` as a package dependency.
 
 ### In a windows service
 
