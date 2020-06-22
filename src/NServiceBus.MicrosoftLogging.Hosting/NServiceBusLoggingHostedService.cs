@@ -49,7 +49,7 @@ class NServiceBusLoggingHostedService :
             }
         }
 
-        DeferredLoggerFactoryDefinition.Factory?.deferredLogs.Clear();
+        DeferredLoggerFactoryDefinition.Factory?.deferredLogs?.Clear();
         DeferredLoggerFactoryDefinition.Factory = null;
 
         return Task.CompletedTask;

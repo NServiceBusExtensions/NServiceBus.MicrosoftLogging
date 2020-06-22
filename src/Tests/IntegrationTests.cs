@@ -5,12 +5,10 @@ using Microsoft.Extensions.Hosting;
 using NServiceBus;
 using NServiceBus.Logging;
 using Microsoft.Extensions.Logging;
-using VerifyXunit;
 using Xunit;
 using Xunit.Abstractions;
 
-public class IntegrationTests :
-    VerifyBase
+public class IntegrationTests
 {
     [Fact]
     public async Task Ensure_log_messages_are_redirected()
@@ -76,8 +74,7 @@ public class IntegrationTests :
         await host.StopAsync();
     }
 
-    public IntegrationTests(ITestOutputHelper output) :
-        base(output)
+    public IntegrationTests()
     {
         LogMessageCapture.LoggingEvents.Clear();
     }
