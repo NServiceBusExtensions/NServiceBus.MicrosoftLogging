@@ -62,7 +62,7 @@ https://nuget.org/packages/NServiceBus.MicrosoftLogging.Hosting
 ## Usage
 
 <!-- snippet: MsLoggingInCode -->
-<a id='snippet-msloggingincode'/></a>
+<a id='snippet-msloggingincode'></a>
 ```cs
 var serviceCollection = new ServiceCollection();
 serviceCollection.AddLogging(loggingBuilder =>
@@ -90,7 +90,7 @@ As `LoggerFactory` implements [IDisposable](https://msdn.microsoft.com/en-us/lib
 Disposing the `LoggerFactory` is done by the underlying infrastructure.
 
 <!-- snippet: MsLoggingInGenericHost -->
-<a id='snippet-msloggingingenerichost'/></a>
+<a id='snippet-msloggingingenerichost'></a>
 ```cs
 var builder = Host.CreateDefaultBuilder();
 builder.ConfigureLogging(logging => { logging.AddConsole(); });
@@ -107,7 +107,7 @@ Note: `UseMicrosoftLogFactoryLogger` requires adding `NServiceBus.MicrosoftLoggi
 When [hosting in a windows service](https://docs.particular.net/nservicebus/hosting/windows-service) `LoggerFactory` should be disposed of as part of the [ServiceBase.OnStop](https://msdn.microsoft.com/en-us/library/system.serviceprocess.servicebase.onstop.aspx) execution.
 
 <!-- snippet: MsLoggingInService -->
-<a id='snippet-mslogginginservice'/></a>
+<a id='snippet-mslogginginservice'></a>
 ```cs
 using MsLogLevel = Microsoft.Extensions.Logging.LogLevel;
 using MsLoggerFactory = Microsoft.Extensions.Logging.ILoggerFactory;
