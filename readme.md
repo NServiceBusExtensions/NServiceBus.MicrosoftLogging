@@ -50,7 +50,7 @@ Support is available via a [Tidelift Subscription](https://tidelift.com/subscrip
   * [Usage when hosting](#usage-when-hosting)
     * [In a generic host](#in-a-generic-host)
     * [In a windows service](#in-a-windows-service)
-  * [Security contact information](#security-contact-information)<!-- endtoc -->
+  * [Security contact information](#security-contact-information)<!-- endToc -->
 
 
 ## NuGet package
@@ -77,7 +77,7 @@ logFactory.UseMsFactory(loggerFactory);
 // endpoint startup and shutdown
 ```
 <sup><a href='/src/Tests/Snippets/Usage.cs#L11-L24' title='File snippet `msloggingincode` was extracted from'>snippet source</a> | <a href='#snippet-msloggingincode' title='Navigate to start of snippet `msloggingincode`'>anchor</a></sup>
-<!-- endsnippet -->
+<!-- endSnippet -->
 
 
 ## Usage when hosting
@@ -98,7 +98,7 @@ builder.ConfigureLogging(logging => { logging.AddConsole(); });
 builder.UseMicrosoftLogFactoryLogging();
 ```
 <sup><a href='/src/Tests/Snippets/GenericHostUsage.cs#L8-L15' title='File snippet `msloggingingenerichost` was extracted from'>snippet source</a> | <a href='#snippet-msloggingingenerichost' title='Navigate to start of snippet `msloggingingenerichost`'>anchor</a></sup>
-<!-- endsnippet -->
+<!-- endSnippet -->
 
 Note: `UseMicrosoftLogFactoryLogger` requires adding `NServiceBus.MicrosoftLogging.Hosting` as a package dependency.
 
@@ -173,7 +173,7 @@ class ProgramService :
 }
 ```
 <sup><a href='/src/Tests/Snippets/ProgramService.cs#L10-L74' title='File snippet `mslogginginservice` was extracted from'>snippet source</a> | <a href='#snippet-mslogginginservice' title='Navigate to start of snippet `mslogginginservice`'>anchor</a></sup>
-<!-- endsnippet -->
+<!-- endSnippet -->
 
 
 ## Security contact information
