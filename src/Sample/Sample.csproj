@@ -10,6 +10,6 @@
     <PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.8" />
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="3.1.8" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.1.8" />
-    <PackageReference Include="ProjectDefaults" Version="1.0.45" PrivateAssets="All" />
+    <PackageReference Include="ProjectDefaults" Version="1.0.46" PrivateAssets="All" />
   </ItemGroup>
 </Project>
