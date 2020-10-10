@@ -62,7 +62,7 @@ https://nuget.org/packages/NServiceBus.MicrosoftLogging.Hosting
 ## Usage
 
 <!-- snippet: MsLoggingInCode -->
-<a id='msloggingincode'></a>
+<a id='snippet-msloggingincode'></a>
 ```cs
 var serviceCollection = new ServiceCollection();
 serviceCollection.AddLogging(loggingBuilder =>
@@ -76,7 +76,7 @@ var logFactory = LogManager.Use<MicrosoftLogFactory>();
 logFactory.UseMsFactory(loggerFactory);
 // endpoint startup and shutdown
 ```
-<sup><a href='/src/Tests/Snippets/Usage.cs#L11-L24' title='Snippet source file'>snippet source</a> | <a href='#msloggingincode' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Snippets/Usage.cs#L11-L24' title='Snippet source file'>snippet source</a> | <a href='#snippet-msloggingincode' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -90,14 +90,14 @@ As `LoggerFactory` implements [IDisposable](https://msdn.microsoft.com/en-us/lib
 Disposing the `LoggerFactory` is done by the underlying infrastructure.
 
 <!-- snippet: MsLoggingInGenericHost -->
-<a id='msloggingingenerichost'></a>
+<a id='snippet-msloggingingenerichost'></a>
 ```cs
 var builder = Host.CreateDefaultBuilder();
 builder.ConfigureLogging(logging => { logging.AddConsole(); });
 // should go before any other Use or Configure method that uses NServiceBus
 builder.UseMicrosoftLogFactoryLogging();
 ```
-<sup><a href='/src/Tests/Snippets/GenericHostUsage.cs#L8-L15' title='Snippet source file'>snippet source</a> | <a href='#msloggingingenerichost' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Snippets/GenericHostUsage.cs#L8-L15' title='Snippet source file'>snippet source</a> | <a href='#snippet-msloggingingenerichost' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Note: `UseMicrosoftLogFactoryLogger` requires adding `NServiceBus.MicrosoftLogging.Hosting` as a package dependency.
@@ -107,7 +107,7 @@ Note: `UseMicrosoftLogFactoryLogger` requires adding `NServiceBus.MicrosoftLoggi
 When [hosting in a windows service](https://docs.particular.net/nservicebus/hosting/windows-service) `LoggerFactory` should be disposed of as part of the [ServiceBase.OnStop](https://msdn.microsoft.com/en-us/library/system.serviceprocess.servicebase.onstop.aspx) execution.
 
 <!-- snippet: MsLoggingInService -->
-<a id='mslogginginservice'></a>
+<a id='snippet-mslogginginservice'></a>
 ```cs
 using MsLogLevel = Microsoft.Extensions.Logging.LogLevel;
 using MsLoggerFactory = Microsoft.Extensions.Logging.ILoggerFactory;
@@ -172,7 +172,7 @@ class ProgramService :
     }
 }
 ```
-<sup><a href='/src/Tests/Snippets/ProgramService.cs#L10-L74' title='Snippet source file'>snippet source</a> | <a href='#mslogginginservice' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Snippets/ProgramService.cs#L10-L74' title='Snippet source file'>snippet source</a> | <a href='#snippet-mslogginginservice' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
