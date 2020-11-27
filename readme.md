@@ -147,9 +147,9 @@ class ProgramService :
             builder.AddConsole();
         });
 
-        var serviceProvider = services.BuildServiceProvider();
+        var provider = services.BuildServiceProvider();
 
-        loggerFactory = serviceProvider.GetService<MsLoggerFactory>();
+        loggerFactory = provider.GetRequiredService<MsLoggerFactory>();
         var logFactory = LogManager.Use<MicrosoftLogFactory>();
         logFactory.UseMsFactory(loggerFactory);
         var endpointConfiguration = new EndpointConfiguration("EndpointName");

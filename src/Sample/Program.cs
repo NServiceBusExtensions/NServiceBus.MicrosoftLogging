@@ -9,11 +9,11 @@ public static class Program
 {
     public static async Task Main()
     {
-        var serviceCollection = new ServiceCollection();
+        var services = new ServiceCollection();
 
-        serviceCollection.AddLogging(logging => { logging.AddConsole(); });
-        await using var serviceProvider = serviceCollection.BuildServiceProvider();
-        using var loggerFactory = serviceProvider.GetService<Microsoft.Extensions.Logging.ILoggerFactory>();
+        services.AddLogging(logging => { logging.AddConsole(); });
+        await using var provider = services.BuildServiceProvider();
+        using var loggerFactory = provider.GetRequiredService<Microsoft.Extensions.Logging.ILoggerFactory>();
         var logFactory = LogManager.Use<MicrosoftLogFactory>();
         logFactory.UseMsFactory(loggerFactory);
 
