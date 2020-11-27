@@ -51,7 +51,7 @@ public class IntegrationTests
         var logMessageCapture = new LogMessageCapture();
         builder.ConfigureLogging(logging => { logging.AddProvider(logMessageCapture); });
         builder.UseMicrosoftLogFactoryLogging(deferLogging);
-        builder.UseNServiceBus(ctx =>
+        builder.UseNServiceBus(_ =>
         {
             var configuration = new EndpointConfiguration("HostingTest");
             configuration.UseTransport<LearningTransport>();

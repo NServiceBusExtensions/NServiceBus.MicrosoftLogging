@@ -22,7 +22,7 @@ public static class HostBuilderExtensions
             LogManager.Use<DeferredLoggerFactoryDefinition>();
         }
 
-        hostBuilder.ConfigureServices((ctx, serviceCollection) =>
+        hostBuilder.ConfigureServices((_, serviceCollection) =>
         {
             serviceCollection.AddHostedService<NServiceBusLoggingHostedService>();
         });

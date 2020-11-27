@@ -35,7 +35,7 @@ public static class Program
         });
         // should go before UseNServiceBus
         builder.UseMicrosoftLogFactoryLogging();
-        builder.UseNServiceBus(ctx =>
+        builder.UseNServiceBus(_ =>
         {
             var configuration = new EndpointConfiguration("MicrosoftLoggingSample");
             configuration.UseTransport<LearningTransport>();
