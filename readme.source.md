@@ -36,9 +36,6 @@ Thanks to all the backing developers. Support this project by [becoming a patron
 Support is available via a [Tidelift Subscription](https://tidelift.com/subscription/pkg/nuget-nservicebus.microsoftlogging?utm_source=nuget-nservicebus.microsoftlogging&utm_medium=referral&utm_campaign=enterprise).
 
 
-toc
-
-
 ## NuGet package
 
 https://nuget.org/packages/NServiceBus.MicrosoftLogging/
@@ -63,16 +60,12 @@ snippet: MsLoggingInGenericHost
 
 Note: `UseMicrosoftLogFactoryLogger` requires adding `NServiceBus.MicrosoftLogging.Hosting` as a package dependency.
 
+
 ### In a windows service
 
 When [hosting in a windows service](https://docs.particular.net/nservicebus/hosting/windows-service) `LoggerFactory` should be disposed of as part of the [ServiceBase.OnStop](https://msdn.microsoft.com/en-us/library/system.serviceprocess.servicebase.onstop.aspx) execution.
 
 snippet: MsLoggingInService
-
-
-## Security contact information
-
-To report a security vulnerability, use the [Tidelift security contact](https://tidelift.com/security). Tidelift will coordinate the fix and disclosure.
 
 
 ## Icon
