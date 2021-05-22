@@ -43,16 +43,6 @@ Thanks to all the backing developers. Support this project by [becoming a patron
 Support is available via a [Tidelift Subscription](https://tidelift.com/subscription/pkg/nuget-nservicebus.microsoftlogging?utm_source=nuget-nservicebus.microsoftlogging&utm_medium=referral&utm_campaign=enterprise).
 
 
-<!-- toc -->
-## Contents
-
-  * [Usage](#usage)
-  * [Usage when hosting](#usage-when-hosting)
-    * [In a generic host](#in-a-generic-host)
-    * [In a windows service](#in-a-windows-service)
-  * [Security contact information](#security-contact-information)<!-- endToc -->
-
-
 ## NuGet package
 
 https://nuget.org/packages/NServiceBus.MicrosoftLogging/
@@ -101,6 +91,7 @@ builder.UseMicrosoftLogFactoryLogging();
 <!-- endSnippet -->
 
 Note: `UseMicrosoftLogFactoryLogger` requires adding `NServiceBus.MicrosoftLogging.Hosting` as a package dependency.
+
 
 ### In a windows service
 
@@ -174,11 +165,6 @@ class ProgramService :
 ```
 <sup><a href='/src/Tests/Snippets/ProgramService.cs#L10-L74' title='Snippet source file'>snippet source</a> | <a href='#snippet-mslogginginservice' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
-
-
-## Security contact information
-
-To report a security vulnerability, use the [Tidelift security contact](https://tidelift.com/security). Tidelift will coordinate the fix and disclosure.
 
 
 ## Icon
