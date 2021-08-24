@@ -1,5 +1,4 @@
-﻿using System;
-using NServiceBus.Logging;
+﻿using NServiceBus.Logging;
 using MsLoggerFactory = Microsoft.Extensions.Logging.ILoggerFactory;
 
 namespace NServiceBus
@@ -20,7 +19,7 @@ namespace NServiceBus
         {
             if (msLoggerFactory == null)
             {
-                throw new Exception($"Call {nameof(MicrosoftLogFactory)}.{nameof(UseMsFactory)}() prior to starting endpoint.");
+                throw new($"Call {nameof(MicrosoftLogFactory)}.{nameof(UseMsFactory)}() prior to starting endpoint.");
             }
             return new LoggerFactory(msLoggerFactory);
         }
@@ -30,14 +29,12 @@ namespace NServiceBus
         /// </summary>
         public void UseMsFactory(MsLoggerFactory msLoggerFactory)
         {
-            Guard.AgainstNull(msLoggerFactory, nameof(msLoggerFactory));
-
             if (this.msLoggerFactory == null)
             {
                 this.msLoggerFactory = msLoggerFactory;
                 return;
             }
-            throw new Exception($"Call {nameof(UseMsFactory)} has already been called.");
+            throw new($"Call {nameof(UseMsFactory)} has already been called.");
         }
     }
 }

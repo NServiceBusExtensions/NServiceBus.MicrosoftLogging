@@ -6,12 +6,12 @@ class DeferredLoggerFactoryDefinition :
 {
     public DeferredLoggerFactoryDefinition()
     {
-        level = new Lazy<LogLevel>(() => LogLevel.Info);
+        level = new(() => LogLevel.Info);
     }
 
     protected override ILoggerFactory GetLoggingFactory()
     {
-        Factory = new DeferredLoggerFactory(level.Value);
+        Factory = new(level.Value);
         return Factory;
     }
 
