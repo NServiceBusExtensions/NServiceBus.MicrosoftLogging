@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Concurrent;
 using NServiceBus.Logging;
 
 class DeferredLoggerFactory :

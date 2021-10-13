@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Concurrent;
-using System.Threading;
-using System.Threading.Tasks;
 using Microsoft.Extensions.Hosting;
 using MsLoggerFactory = Microsoft.Extensions.Logging.ILoggerFactory;
 using NServiceBus;

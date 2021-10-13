@@ -1,4 +1,3 @@
-using System;
 using NServiceBus.Logging;
 
 class NamedLogger :

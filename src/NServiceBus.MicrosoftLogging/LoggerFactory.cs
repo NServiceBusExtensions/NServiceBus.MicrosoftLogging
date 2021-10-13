@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.Logging;
 using NServiceBus.Logging;
 using ILoggerFactory = NServiceBus.Logging.ILoggerFactory;
 using MsLoggerFactory = Microsoft.Extensions.Logging.ILoggerFactory;
