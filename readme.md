@@ -163,7 +163,7 @@ class ProgramService :
     }
 }
 ```
-<sup><a href='/src/Tests/Snippets/ProgramService.cs#L10-L74' title='Snippet source file'>snippet source</a> | <a href='#snippet-mslogginginservice' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Snippets/ProgramService.cs#L8-L72' title='Snippet source file'>snippet source</a> | <a href='#snippet-mslogginginservice' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
