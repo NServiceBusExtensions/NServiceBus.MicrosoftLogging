@@ -15,7 +15,7 @@ class LogMessageCapture :
         return this;
     }
 
-    public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception exception, Func<TState, Exception, string> formatter)
+    public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception? exception, Func<TState, Exception?, string> formatter)
     {
         var text = formatter.Invoke(state, exception);
         LoggingEvents.Add(text);
