@@ -3,7 +3,6 @@ using Microsoft.Extensions.Hosting;
 using NServiceBus;
 using NServiceBus.Logging;
 using Microsoft.Extensions.Logging;
-using Xunit;
 
 public class IntegrationTests
 {
