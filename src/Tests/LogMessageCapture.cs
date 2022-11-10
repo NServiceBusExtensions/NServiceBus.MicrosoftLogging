@@ -10,10 +10,8 @@ class LogMessageCapture :
     {
     }
 
-    public ILogger CreateLogger(string categoryName)
-    {
-        return this;
-    }
+    public ILogger CreateLogger(string categoryName) =>
+        this;
 
     public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception? exception, Func<TState, Exception?, string> formatter)
     {
@@ -21,13 +19,10 @@ class LogMessageCapture :
         LoggingEvents.Add(text);
     }
 
-    public bool IsEnabled(LogLevel logLevel)
-    {
-        return true;
-    }
+    public bool IsEnabled(LogLevel logLevel) =>
+        true;
 
-    public IDisposable BeginScope<TState>(TState state)
-    {
-        return this;
-    }
+    public IDisposable? BeginScope<TState>(TState state)
+        where TState : notnull =>
+        this;
 }

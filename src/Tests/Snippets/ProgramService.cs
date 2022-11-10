@@ -31,10 +31,8 @@ class ProgramService :
         service.OnStop();
     }
 
-    protected override void OnStart(string[]? args)
-    {
+    protected override void OnStart(string[]? args) =>
         AsyncOnStart().GetAwaiter().GetResult();
-    }
 
     async Task AsyncOnStart()
     {
@@ -55,10 +53,8 @@ class ProgramService :
         endpointInstance = await Endpoint.Start(endpointConfiguration);
     }
 
-    protected override void OnStop()
-    {
+    protected override void OnStop() =>
         AsyncOnStop().GetAwaiter().GetResult();
-    }
 
     async Task AsyncOnStop()
     {
@@ -73,8 +69,6 @@ class ProgramService :
 
 class ServiceHelper
 {
-    public static bool IsService()
-    {
+    public static bool IsService() =>
         throw new NotImplementedException();
-    }
 }

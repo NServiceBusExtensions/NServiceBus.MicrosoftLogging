@@ -119,10 +119,8 @@ class ProgramService :
         service.OnStop();
     }
 
-    protected override void OnStart(string[]? args)
-    {
+    protected override void OnStart(string[]? args) =>
         AsyncOnStart().GetAwaiter().GetResult();
-    }
 
     async Task AsyncOnStart()
     {
@@ -143,10 +141,8 @@ class ProgramService :
         endpointInstance = await Endpoint.Start(endpointConfiguration);
     }
 
-    protected override void OnStop()
-    {
+    protected override void OnStop() =>
         AsyncOnStop().GetAwaiter().GetResult();
-    }
 
     async Task AsyncOnStop()
     {
@@ -158,7 +154,7 @@ class ProgramService :
     }
 }
 ```
-<sup><a href='/src/Tests/Snippets/ProgramService.cs#L8-L72' title='Snippet source file'>snippet source</a> | <a href='#snippet-mslogginginservice' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Snippets/ProgramService.cs#L8-L68' title='Snippet source file'>snippet source</a> | <a href='#snippet-mslogginginservice' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 

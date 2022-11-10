@@ -15,14 +15,11 @@ class DeferredLoggerFactory :
         isFatalEnabled = LogLevel.Fatal >= filterLevel;
     }
 
-    public ILog GetLogger(Type type)
-    {
-        return GetLogger(type.FullName);
-    }
+    public ILog GetLogger(Type type) =>
+        GetLogger(type.FullName);
 
-    public ILog GetLogger(string name)
-    {
-        return new NamedLogger(name, this)
+    public ILog GetLogger(string name) =>
+        new NamedLogger(name, this)
         {
             IsDebugEnabled = isDebugEnabled,
             IsInfoEnabled = isInfoEnabled,
@@ -30,7 +27,6 @@ class DeferredLoggerFactory :
             IsErrorEnabled = isErrorEnabled,
             IsFatalEnabled = isFatalEnabled
         };
-    }
 
     public void Write(string name, LogLevel messageLevel, string message)
     {

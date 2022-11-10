@@ -8,10 +8,8 @@ class LoggerFactory :
 {
     MsLoggerFactory msFactory;
 
-    public LoggerFactory(MsLoggerFactory msFactory)
-    {
+    public LoggerFactory(MsLoggerFactory msFactory) =>
         this.msFactory = msFactory;
-    }
 
     public ILog GetLogger(Type type)
     {

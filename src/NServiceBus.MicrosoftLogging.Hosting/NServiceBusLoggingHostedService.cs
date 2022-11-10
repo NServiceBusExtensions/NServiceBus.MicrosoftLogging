@@ -6,10 +6,8 @@ using NServiceBus.Logging;
 class NServiceBusLoggingHostedService :
     IHostedService
 {
-    public NServiceBusLoggingHostedService(MsLoggerFactory loggerFactory)
-    {
+    public NServiceBusLoggingHostedService(MsLoggerFactory loggerFactory) =>
         this.loggerFactory = loggerFactory;
-    }
 
     public Task StartAsync(CancellationToken cancellationToken)
     {

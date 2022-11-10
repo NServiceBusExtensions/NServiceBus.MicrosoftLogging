@@ -9,7 +9,7 @@ public class IntegrationTests
     [Fact]
     public async Task Ensure_log_messages_are_redirected()
     {
-        using var msLoggerFactory = new LoggerFactory();
+        var msLoggerFactory = new LoggerFactory();
         var logMessageCapture = new LogMessageCapture();
         msLoggerFactory.AddProvider(logMessageCapture);
         var logFactory = LogManager.Use<MicrosoftLogFactory>();
@@ -31,16 +31,12 @@ public class IntegrationTests
     }
 
     [Fact]
-    public Task Ensure_log_messages_are_redirected_in_Hosting_deferred()
-    {
-        return RunWithHost(true);
-    }
+    public Task Ensure_log_messages_are_redirected_in_Hosting_deferred() =>
+        RunWithHost(true);
 
     [Fact]
-    public Task Ensure_log_messages_are_redirected_in_Hosting_not_deferred()
-    {
-        return RunWithHost(false);
-    }
+    public Task Ensure_log_messages_are_redirected_in_Hosting_not_deferred() =>
+        RunWithHost(false);
 
     static async Task RunWithHost(bool deferLogging)
     {
@@ -70,8 +66,6 @@ public class IntegrationTests
         await host.StopAsync();
     }
 
-    public IntegrationTests()
-    {
+    public IntegrationTests() =>
         LogMessageCapture.LoggingEvents.Clear();
-    }
 }

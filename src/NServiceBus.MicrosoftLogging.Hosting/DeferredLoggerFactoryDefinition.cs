@@ -3,10 +3,8 @@ using NServiceBus.Logging;
 class DeferredLoggerFactoryDefinition :
     LoggingFactoryDefinition
 {
-    public DeferredLoggerFactoryDefinition()
-    {
+    public DeferredLoggerFactoryDefinition() =>
         level = new(() => LogLevel.Info);
-    }
 
     protected override ILoggerFactory GetLoggingFactory()
     {
