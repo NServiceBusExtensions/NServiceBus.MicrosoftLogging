@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>net48;net7.0</TargetFrameworks>
   </PropertyGroup>
   <ItemGroup>
+    <Using Remove="System.Net.Http" />
     <PackageReference Include="NServiceBus" Version="8.0.2" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.0" />
     <PackageReference Include="ProjectDefaults" Version="1.0.84" PrivateAssets="all" />

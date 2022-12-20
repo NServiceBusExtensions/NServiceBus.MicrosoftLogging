@@ -16,7 +16,7 @@ class DeferredLoggerFactory :
     }
 
     public ILog GetLogger(Type type) =>
-        GetLogger(type.FullName);
+        GetLogger(type.FullName!);
 
     public ILog GetLogger(string name) =>
         new NamedLogger(name, this)
