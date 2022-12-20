@@ -1,6 +1,5 @@
 using Microsoft.Extensions.Hosting;
 using MsLoggerFactory = Microsoft.Extensions.Logging.ILoggerFactory;
-using NServiceBus;
 using NServiceBus.Logging;
 
 class NServiceBusLoggingHostedService :
