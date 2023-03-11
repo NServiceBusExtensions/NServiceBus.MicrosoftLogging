@@ -8,7 +8,7 @@ class NServiceBusLoggingHostedService :
     public NServiceBusLoggingHostedService(MsLoggerFactory loggerFactory) =>
         this.loggerFactory = loggerFactory;
 
-    public Task StartAsync(CancellationToken cancellationToken)
+    public Task StartAsync(Cancellation cancellation)
     {
         var logFactory = LogManager.Use<MicrosoftLogFactory>();
         logFactory.UseMsFactory(loggerFactory);
@@ -48,7 +48,7 @@ class NServiceBusLoggingHostedService :
         return Task.CompletedTask;
     }
 
-    public Task StopAsync(CancellationToken cancellationToken)
+    public Task StopAsync(Cancellation cancellation)
     {
         loggerFactory.Dispose();
         return Task.CompletedTask;
