@@ -6,7 +6,7 @@
   <ItemGroup>
     <PackageReference Include="NServiceBus" Version="8.1.1" />
     <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="7.0.0" />
-    <PackageReference Include="ProjectDefaults" Version="1.0.91" PrivateAssets="all" />
+    <PackageReference Include="ProjectDefaults" Version="1.0.93" PrivateAssets="all" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" Condition="$(Configuration) == 'Release'" />
     <ProjectReference Include="..\NServiceBus.MicrosoftLogging\NServiceBus.MicrosoftLogging.csproj" />
   </ItemGroup>
