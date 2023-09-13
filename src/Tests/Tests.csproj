@@ -16,7 +16,7 @@
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="7.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="7.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.1" />
-    <PackageReference Include="ProjectDefaults" Version="1.0.94" PrivateAssets="all" />
+    <PackageReference Include="ProjectDefaults" Version="1.0.97" PrivateAssets="all" />
     <PackageReference Include="NServiceBus.Extensions.Hosting" Version="2.0.0" />
     <PackageReference Include="System.ServiceProcess.ServiceController" Version="7.0.1" />
   </ItemGroup>
