@@ -5,6 +5,8 @@
 
 Add support for [NServiceBus](https://particular.net/nservicebus) to log to [Microsoft.Extensions.Logging](https://github.com/aspnet/Logging).
 
+**See [Milestones](../../milestones?state=closed) for release notes.**
+
 <!--- StartOpenCollectiveBackers -->
 
 [Already a Patron? skip past this section](#endofbacking)
