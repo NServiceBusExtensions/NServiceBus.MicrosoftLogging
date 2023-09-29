@@ -2,16 +2,13 @@ using Microsoft.Extensions.Hosting;
 using MsLoggerFactory = Microsoft.Extensions.Logging.ILoggerFactory;
 using NServiceBus.Logging;
 
-class NServiceBusLoggingHostedService :
+class NServiceBusLoggingHostedService(MsLoggerFactory factory) :
     IHostedService
 {
-    public NServiceBusLoggingHostedService(MsLoggerFactory loggerFactory) =>
-        this.loggerFactory = loggerFactory;
-
     public Task StartAsync(Cancel cancel)
     {
         var logFactory = LogManager.Use<MicrosoftLogFactory>();
-        logFactory.UseMsFactory(loggerFactory);
+        logFactory.UseMsFactory(factory);
 
         foreach (var deferredLog in DeferredLoggerFactoryDefinition.Factory?.deferredLogs ??
             new ConcurrentDictionary<string, ConcurrentQueue<(LogLevel level, string message)>>())
@@ -42,7 +39,7 @@ class NServiceBusLoggingHostedService :
             }
         }
 
-        DeferredLoggerFactoryDefinition.Factory?.deferredLogs?.Clear();
+        DeferredLoggerFactoryDefinition.Factory?.deferredLogs.Clear();
         DeferredLoggerFactoryDefinition.Factory = null;
 
         return Task.CompletedTask;
@@ -50,9 +47,7 @@ class NServiceBusLoggingHostedService :
 
     public Task StopAsync(Cancel cancel)
     {
-        loggerFactory.Dispose();
+        factory.Dispose();
         return Task.CompletedTask;
     }
-
-    MsLoggerFactory loggerFactory;
 }

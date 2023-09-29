@@ -1,19 +1,9 @@
 using NServiceBus.Logging;
 
-class DeferredLoggerFactory :
+class DeferredLoggerFactory(LogLevel level) :
     ILoggerFactory
 {
     public ConcurrentDictionary<string, ConcurrentQueue<(LogLevel level, string message)>> deferredLogs = new();
-
-    public DeferredLoggerFactory(LogLevel filterLevel)
-    {
-        this.filterLevel = filterLevel;
-        isDebugEnabled = LogLevel.Debug >= filterLevel;
-        isInfoEnabled = LogLevel.Info >= filterLevel;
-        isWarnEnabled = LogLevel.Warn >= filterLevel;
-        isErrorEnabled = LogLevel.Error >= filterLevel;
-        isFatalEnabled = LogLevel.Fatal >= filterLevel;
-    }
 
     public ILog GetLogger(Type type) =>
         GetLogger(type.FullName!);
@@ -30,7 +20,7 @@ class DeferredLoggerFactory :
 
     public void Write(string name, LogLevel messageLevel, string message)
     {
-        if (messageLevel < filterLevel)
+        if (messageLevel < level)
         {
             return;
         }
@@ -38,10 +28,9 @@ class DeferredLoggerFactory :
         logQueues.Enqueue((messageLevel, message));
     }
 
-    LogLevel filterLevel;
-    bool isDebugEnabled;
-    bool isErrorEnabled;
-    bool isFatalEnabled;
-    bool isInfoEnabled;
-    bool isWarnEnabled;
+    bool isDebugEnabled = LogLevel.Debug >= level;
+    bool isErrorEnabled = LogLevel.Error >= level;
+    bool isFatalEnabled = LogLevel.Fatal >= level;
+    bool isInfoEnabled = LogLevel.Info >= level;
+    bool isWarnEnabled = LogLevel.Warn >= level;
 }
