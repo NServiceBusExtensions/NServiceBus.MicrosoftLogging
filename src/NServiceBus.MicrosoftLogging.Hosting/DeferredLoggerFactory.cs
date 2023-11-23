@@ -3,7 +3,7 @@ using NServiceBus.Logging;
 class DeferredLoggerFactory(LogLevel level) :
     ILoggerFactory
 {
-    public ConcurrentDictionary<string, ConcurrentQueue<(LogLevel level, string message)>> deferredLogs = new();
+    public ConcurrentDictionary<string, ConcurrentQueue<(LogLevel level, string message)>> deferredLogs = [];
 
     public ILog GetLogger(Type type) =>
         GetLogger(type.FullName!);

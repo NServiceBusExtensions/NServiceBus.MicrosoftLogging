@@ -4,7 +4,7 @@ class LogMessageCapture :
     ILoggerProvider,
     ILogger
 {
-    public static ConcurrentBag<string> LoggingEvents = new();
+    public static ConcurrentBag<string> LoggingEvents = [];
 
     public void Dispose()
     {
