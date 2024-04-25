@@ -4,7 +4,7 @@
     <TargetFrameworks>net48;net7.0</TargetFrameworks>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Polyfill" Version="4.9.0" PrivateAssets="all" />
+    <PackageReference Include="Polyfill" Version="5.0.0" PrivateAssets="all" />
     <PackageReference Include="NServiceBus" Version="8.2.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.1" />
     <PackageReference Include="ProjectDefaults" Version="1.0.109" PrivateAssets="all" />
